@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard{
+    width: 100%;
+    height: 100vh;
+    display: grid; 
+    grid-template-columns: 6% 94%;
+}
+
+.dash-side-bar{
+    grid-column: 1/2;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #737373c0;
+}
+
+.main-dash{
+
+    grid-column: 2/3;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 10% 90%;
+    gap: 5%;
+}
+
+.task-maker{    
+    grid-row: 1/2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0.5%;
+}
+
+.task-input{
+    
+    width: 60%;
+    border: 0.5px solid black;
+    border-radius: 20px;
+    padding: 2%;
+    color: black;
+    
+}
+
+.task-btn{
+    width: 20%;
+    padding: 0.5%;
+    color: black;
+}
+
+
+.task-container{
+    grid-row: 2/3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.task-card {
+    height: 5%;
+    margin-top: 1rem;
+    margin-left: -2%;
+    border-radius: 20px;
+    background: #f5f5f5;
+    padding: 1.8rem;
+    border: 2px solid #c3c6ce;
+    transition: 0.5s ease-out;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background:rgba(0, 0, 0, 0.779);
+    color: white;
+}
+
+
+.roles{
+    
+}
+
+.card-button {
+    transform: translate(-50%, 125%);
+    width: 10%;
+    border-radius: 1rem;
+    border: none;
+    background-color: #008bf8;
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    opacity: 0;
+    transition: 0.3s ease-out;
+}
+
+.task-card:hover {
+    border-color: #008bf8;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.task-card:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+}
